@@ -1,0 +1,249 @@
+@import "layout";
+
+.dyslexia {
+  position: relative;
+  background-color: $darkBlue;
+  height: 100vh;
+ 
+  &:before {
+    content: '';
+    background-image: url("../img/bg.png");
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet{
+      background-repeat: inherit;
+      background-size: inherit;
+    }
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 414px;
+    width: 90%;
+    padding: 0 5%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    @include tablet {
+      max-width: none;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .back {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    z-index: 1;
+  }
+
+  .js-steps {
+    margin-bottom: 90px;
+  }
+
+  .home {
+    position: relative;
+    font-family: "lemonmilkregular", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #fae1ab;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 480px;
+    border-top: 0;
+    @include tablet {
+      margin-left: 60px;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+    @include media-smaller-than(360px) {
+      margin-left: 30px;
+    }
+
+    h1 {
+      font-size: $font-size50;
+      color: $white;
+      text-align: center;
+      padding: 0 30px;
+      margin-bottom: 10px;
+      letter-spacing: 6.9px;
+    }
+
+    h2 {
+      font-size: $font-size28;
+      color: $goldenYellow;
+      text-align: center;
+      padding: 5px 25px;
+      letter-spacing: 3.6px;
+
+      &.copy {
+        padding-top: 0;
+        font-size: $font-size33;
+        letter-spacing: 4.6px;
+      }
+    }
+
+    .glasses {
+      position: absolute;
+      bottom: -45px;
+      left: -48px;
+      @include media-smaller-than(360px) {
+        left: -30px;
+      }
+    }
+  }
+
+  .step2,
+  .step3,
+  .step4 {
+    position: relative;
+    font-family: $LemonMilk;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-family: $LemonMilk;
+      font-size: $font-size16;
+      color: $white;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      letter-spacing: 2.2px;
+    }
+
+    a {
+      max-width: 190px;
+      width: 100%;
+      font-size: $font-size48;
+      color: $goldenYellow;
+      text-align: center;
+      border: 1px solid rgba(250, 225, 171, 0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      letter-spacing: 6.6px;
+
+      &.selected {
+        background-color: rgba(250, 225, 171, 0.1);
+        border: 2px solid $goldenYellow;
+      }
+    }
+  }
+
+  .step2 {
+    a {
+      padding: 71px 0;
+    }
+  }
+
+  .step3 {
+    a {
+      padding: 22px 0;
+
+      img {
+        max-width: 135px;
+      }
+    }
+  }
+
+  .step4 {
+    overflow: hidden;
+
+    figure {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .left {
+        position: absolute;
+        top: 77px;
+        left: -204px;
+        /* overflow: hidden; */
+        max-width: 232px;
+      }
+
+      .middle {
+        max-width: 301px;
+      }
+
+      .right {
+        position: absolute;
+        top: -60px;
+        max-width: 280px;
+        right: -190px;
+      }
+    }
+
+    h3 {
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+
+    .faces {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: inherit;
+      margin-top: 0;
+
+      a {
+        width: 91px;
+        margin-right: 15px;
+        padding: 5px;
+        margin-bottom: 0;
+        @include media-smaller-than(360px) {
+          margin-right: 1%;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    max-width: 414px;
+    margin: 0 auto;
+    background-color: $goldenYellow;
+    text-align: center;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 100%;
+    touch-action: manipulation;
+    left: 50%;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    transform: translateX(-50%);
+
+    h2 {
+      font-family: $CaviarDreamsBold;
+      font-size: $font-size16;
+      font-weight: 700;
+      color: $black;
+      padding: 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 2.2px;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale = 1.0">
+  <meta name="description" content="Dyslexia App to help Dyslexia people">
+  <meta name="theme-color" content="#224757">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Dyslexia App</title>
+
+  <link rel="preload" href="dist/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="dist/main.css"></noscript>
+  <link rel="icon" sizes="192x192" href="images/icons/icon-144x144.png">
+  <link rel="manifest" href="manifest.json">
+
+
+</head>
+
+<body>
+  <section class="dyslexia">
+    <div class="wrapper">
+      <figure class="back">
+        <img src="img/back.png" alt="">
+      </figure>
+
+
+      <div class="js-steps home" data-step="1">
+        <figure>
+          <img src="img/chama-se.png" alt="Dyslexia text">
+        </figure>
+        <figure class="glasses">
+          <img src="img/glasses.png" alt="glasses 3D">
+        </figure>
+      </div>
+
+      <div class="js-steps step2" data-step="2">
+        <h1>És Dislexico?</h1>
+        <a href="#">Sim!!</a>
+        <a href="#">Não.</a>
+      </div>
+
+      <div class="js-steps step3" data-step="3">
+        <h1>Quem és?</h1>
+        <a href="#" data-people="boy"><img src="img/cara-feliz@2x.png" alt="happy face"></a>
+        <a href="#" data-people="girl"><img src="img/cara@2x.png" alt="normal face"></a>
+      </div>
+
+      <div class="js-steps step4" data-step="4">
+        <figure>
+          <img class="left" src="img/left-square.png" alt="left square">
+          <img class="middle" src="" alt="middle square">
+          <img class="right" src="img/right-square.png" alt="right square">
+        </figure>
+        <h1>Como te sentes?</h1>
+        <div class="faces">
+          <a href="#"><img src="" alt="faces selected"></a>
+          <a href="#"><img src="" alt="faces selected"></a>
+          <a href="#"><img src="" alt="faces selected"></a>
+        </div>
+
+      </div>
+
+
+      <footer class="js-footer">
+        <h2 class="next">Seguinte</h2>
+      </footer>
+
+    </div>
+  </section>
+
+
+  <script src="dist/jquery-3.3.1.min.js"></script>
+  <script src="dist/loadcss.js"></script>
+  <script async src="dist/main.js"></script>
+</body>
+
+</html>
